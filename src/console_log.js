@@ -13,3 +13,4 @@ const url = "https://no-api-key.com/api/v1/facts";
 fetch(url).then(res => res.json()).then(data => console.log(data));
 
 /* as you can see we are console.log() data, which will return the json from that api. which is a random fact. */
+
