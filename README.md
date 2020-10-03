@@ -12,7 +12,7 @@ Read the contribution guidelines to make an awesome PR to this project!
 - Feel free to create new issues for concepts you feel are missing.
 - Only JS code is allowed, every file should contain a brief explanation with working code.
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png)
-
 # Don't forget to star 🌟 the repository and share with JS developers to help beginners understand JS and finish this year's challenge!
 # Once again Happy Hacktoberfest !
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png)
+
