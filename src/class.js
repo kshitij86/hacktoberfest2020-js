@@ -89,7 +89,7 @@ Library.display(obj1);
         super(book,person);
     }
 
-    //getters can be used to return values 
+    //getters are used to return values 
     get _book(){
 
         return this.novel.map(item =>{
@@ -97,7 +97,7 @@ Library.display(obj1);
         });
 
     }
-    //setters can be used to set values
+    //setters are used to set values
     set _book(book){
         this.novel.push(book);
     }
