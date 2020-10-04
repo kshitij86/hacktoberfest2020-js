@@ -6,7 +6,7 @@ Read the contribution guidelines to make an awesome PR to this project!
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s--F2dUk6XP--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/2gkfxydka19y491lh63n.jpg)
 
 # Contribution Guidelines
-- This codebase serves as a simple reference for NodeJS concepts.
+- This codebase serves as a simple reference for JS concepts.
 - Valid `pull requests` that solve `issues` already specified, will be merged. ✔️
 - Any others will be marked as invalid and will not count towards this year's challenge.
 - Feel free to create new issues for concepts you feel are missing.
