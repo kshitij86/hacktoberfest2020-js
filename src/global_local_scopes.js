@@ -9,13 +9,10 @@ function myFunction() {
 }
 console.log(food); //code here CANNOT use food variable
 
-
-
-
 //GLOBAL VARIABLES
 //---------------
 //A variable declared outside a function, becomes GLOBAL.
-//A global variable has global scope: All scripts and functions on a web page can access it. 
+//A global variable has global scope: All scripts and functions on a web page can access it.
 
 var food = "Apple";
 

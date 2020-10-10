@@ -21,5 +21,5 @@ addOne(); // return 1
 addOne(); // return 2
 addOne(); // return 3
 
-//closures prevent the memory from setting variables free. 
+//closures prevent the memory from setting variables free.
 //be careful when returning a function from a function. Memory leaks in javascript is a sensitive subject.
