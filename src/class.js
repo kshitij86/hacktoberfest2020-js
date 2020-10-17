@@ -10,66 +10,60 @@
 
  */
 
- //Let's see with an example
+//Let's see with an example
 
- //class declaration
+//class declaration
 class Library {
+  //constructor method initialize properties when class gets initiated.
 
-    //constructor method initialize properties when class gets initiated.
+  constructor(book, person) {
+    this.book = book;
+    this.person = person;
+    this.novel = [
+      {
+        Name: "A Tale of two cities",
+        Author: "Charles dickens",
+        Genre: "Novel",
+        Language: "English",
+      },
+      {
+        Name: "Harry Potter",
+        Author: "J.K.Rowling",
+        Genre: "Novel",
+        Language: "English",
+      },
+    ];
+  }
 
-    constructor(book,person){
-        
-        this.book = book;
-        this.person = person;
-        this.novel = [
-            {
-             Name:"A Tale of two cities",
-             Author:"Charles dickens",
-             Genre:"Novel",
-             Language:"English"
-            },
-            {
-             Name:"Harry Potter",
-             Author:"J.K.Rowling",
-             Genre:"Novel",
-             Language:"English"
-            }
-          ];
-    };
+  //Static methods are defined on the class itself, and not on the prototype
+  //i.e it can be invoked only using class rather than objects.
 
-    //Static methods are defined on the class itself, and not on the prototype 
-    //i.e it can be invoked only using class rather than objects.
+  static display(obj) {
+    console.log(`${obj.person} lends ${obj.book.Name}`);
+  }
 
-    static display(obj){
+  //method which can be invoked using object
 
-        console.log(`${obj.person} lends ${obj.book.Name}`);
-    }
-
-    //method which can be invoked using object
-
-    displayId(id){
-        console.log(`${this.person} id is ${id}`);
-    }
-
+  displayId(id) {
+    console.log(`${this.person} id is ${id}`);
+  }
 }
 
-
 let lendedBook = {
-    Name:"Two States",
-    Author:"Chetan Bhagat",
-    Genre:"Novel",
-    Language:"English"
-   };
+  Name: "Two States",
+  Author: "Chetan Bhagat",
+  Genre: "Novel",
+  Language: "English",
+};
 
-//instance of Library is created   
-obj1 = new Library(lendedBook,"James");
+//instance of Library is created
+obj1 = new Library(lendedBook, "James");
 
 //static method is called
 obj1.displayId("123");
 
 //method is called
 Library.display(obj1);
-
 
 /**
  
@@ -79,41 +73,37 @@ Library.display(obj1);
  * class expression can be named or unnamed.
 
  */
- let addBook = class add extends Library{
+let addBook = class add extends Library {
+  constructor(book, person) {
+    //By calling the super() method in the constructor method, we call the parent's constructor method
+    //and gets access to the parent's properties and methods.
 
-    constructor(book,person,){
+    super(book, person);
+  }
 
-        //By calling the super() method in the constructor method, we call the parent's constructor method 
-        //and gets access to the parent's properties and methods.
+  //getters are used to return values
+  get _book() {
+    return this.novel.map((item) => {
+      console.log(`Name:${item.Name},Author:${item.Author}`);
+    });
+  }
+  //setters are used to set values
+  set _book(book) {
+    this.novel.push(book);
+  }
 
-        super(book,person);
-    }
+  //getters and setters are useful when we have to add special properties before getting or setting an element.
+};
 
-    //getters are used to return values 
-    get _book(){
+let obj2 = new addBook(lendedBook, "gary");
 
-        return this.novel.map(item =>{
-            console.log(`Name:${item.Name},Author:${item.Author}`);
-        });
+console.log("Books before addition");
+//returns the book that are already in library.
+obj2._book;
 
-    }
-    //setters are used to set values
-    set _book(book){
-        this.novel.push(book);
-    }
+//adding the "lendedbook" in library.
+obj2._book = lendedBook;
 
-    //getters and setters are useful when we have to add special properties before getting or setting an element.
- }
-
- let obj2 = new addBook(lendedBook,"gary");
-
- console.log("Books before addition");
- //returns the book that are already in library.
- obj2._book;
- 
- //adding the "lendedbook" in library.
- obj2._book = lendedBook;
- 
- console.log("Books after addition");
- //Now if you get the books in library the lended book will also be there.
- obj2._book;
+console.log("Books after addition");
+//Now if you get the books in library the lended book will also be there.
+obj2._book;

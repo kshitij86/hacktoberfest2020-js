@@ -2,14 +2,13 @@
 // as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
 
 function greeting(name) {
-    console.log(`Hello ${name}, welcome to Hacktoberfest!`);
+  console.log(`Hello ${name}, welcome to Hacktoberfest!`);
 }
 
 function introduction(firstName, lastName, callback) {
-    const fullName = `${firstName} ${lastName}`;
+  const fullName = `${firstName} ${lastName}`;
 
-    callback(fullName);
+  callback(fullName);
 }
 
-introduction('Chris', 'Nwamba', greeting);
-
+introduction("Chris", "Nwamba", greeting);

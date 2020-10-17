@@ -50,22 +50,22 @@ function genericCurrify(func) {
 }
 
 /**
- * Lets try with another example with more than 2 arguments. 
- * Lets assume we write a function to calucalte volume of a cuboid. 
+ * Lets try with another example with more than 2 arguments.
+ * Lets assume we write a function to calucalte volume of a cuboid.
  * The volume of a cuboid formula is given by, The volume of a cuboid = Length × Width × Height Cubic units.
  */
-function volume (length, breadth, height) {
-    return length*breadth*height
+function volume(length, breadth, height) {
+  return length * breadth * height;
 }
 // Lets try with calulated volume directly for 2 X 3 X 4 = 24
-volume(2,3,4) //returns 24
+volume(2, 3, 4); //returns 24
 
 /**
  * Lets currify volume, using genericCurrify
  */
-curriedVolume = genericCurrify(volume)
+curriedVolume = genericCurrify(volume);
 
 /**
  * Lets try it out
  */
-curriedVolume(2)(3)(4) // returns same 24
+curriedVolume(2)(3)(4); // returns same 24

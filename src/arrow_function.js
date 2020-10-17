@@ -8,7 +8,6 @@ No function name
 A list of arguments within parenthesis, followed by a 'fat arrow' (=>), followed by a function body.
 */
 
-
 let add = (a, b) => a + b;
 
-console.log(`Sum is ${add(5,10)}`);
+console.log(`Sum is ${add(5, 10)}`);
