@@ -1,4 +1,4 @@
-# hacktoberfest2020-js
+# [hacktoberfest2020-js](https://kshitij86.github.io/hacktoberfest2020-js/)
 This repository is an easy reference for JS concepts. An effort to help everyone finish this year's challenge.
 Read the contribution guidelines to make an awesome PR to this project!
 
